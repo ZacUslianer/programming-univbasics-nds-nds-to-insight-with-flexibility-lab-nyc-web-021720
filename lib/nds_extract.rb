@@ -75,6 +75,7 @@ def movies_with_directors_set(source)
    while film_index < movie_names.length do 
     movie = movie_names[film_index]
     movie[:director_name] = director_data[:name]
+    new_movies << movie
     film_index += 1 
    end
    row_index += 1 
