@@ -64,6 +64,16 @@ def gross_per_studio(collection)
   
 end
 def make_movies_with_directors(director_data)
+   movie_names = director_data[:movies]
+   film_index = 0 
+   new_movies = []
+   while film_index < movie_names.length do 
+    movie = movie_names[film_index]
+    movie[:director_name] = director_data[:name]
+    new_movies << movie
+    film_index += 1 
+   end
+  new_movies
 end
 
 def movies_with_directors_set(source)
