@@ -63,6 +63,8 @@ def gross_per_studio(collection)
  new_hash
   
 end
+def make_movies_with_directors(director_data)
+end
 
 def movies_with_directors_set(source)
  new_array = []
