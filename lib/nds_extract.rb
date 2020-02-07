@@ -81,27 +81,11 @@ def movies_with_directors_set(source)
  row_index = 0 
  while row_index < source.length do 
    director_data = source[row_index]
-   movie_names = director_data[:movies]
-   film_index = 0 
-   new_movies = []
-   while film_index < movie_names.length do 
-    movie = movie_names[film_index]
-    movie[:director_name] = director_data[:name]
-    new_movies << movie
-    film_index += 1 
-   end
+   movie_names = make_movies_with_directors(director_data)
+   new_array << movie_names
    row_index += 1 
  end
-  # GOAL: For each director, find their :movies Array and stick it in a new Array
-  #
-  # INPUT:
-  # * source: An Array of Hashes containing director information including
-  # :name and :movies
-  #
-  # RETURN:
-  #
-  # Array of Arrays containing all of a director's movies. Each movie will need
-  # to have a :director_name key added to it.
+ new_array
 end
 
 # ----------------    End of Your Code Region --------------------
